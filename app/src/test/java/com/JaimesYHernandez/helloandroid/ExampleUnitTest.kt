@@ -1,4 +1,4 @@
-package com.Mejia.helloandroid
+package com.JaimesYHernandez.helloandroid
 
 import org.junit.Test
 

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.Mejia.helloandroid"
+    namespace = "com.JaimesYHernandez.helloandroid"
     compileSdk = 36
 
     defaultConfig {

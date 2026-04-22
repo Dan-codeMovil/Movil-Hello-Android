@@ -1,10 +1,9 @@
-package com.Mejia.helloandroid
+package com.JaimesYHernandez.helloandroid
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.Mejia.helloandroid.viewmodel.UserViewModel
-import com.Mejia.helloandroid.R
+import com.JaimesYHernandez.helloandroid.viewmodel.UserViewModel
 
 class MainActivity : AppCompatActivity() {
 

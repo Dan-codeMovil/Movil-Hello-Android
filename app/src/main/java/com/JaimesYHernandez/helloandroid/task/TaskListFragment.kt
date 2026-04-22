@@ -1,4 +1,4 @@
-package com.Mejia.helloandroid.ui.task
+package com.JaimesYHernandez.helloandroid.ui.task
 
 import android.os.Bundle
 import android.view.View
@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.Mejia.helloandroid.R
-import com.Mejia.helloandroid.data.task.TaskRepository
+import com.JaimesYHernandez.helloandroid.R
+import com.JaimesYHernandez.helloandroid.data.task.TaskRepository
 
 class TaskListFragment : Fragment(R.layout.fragment_task_list) {
 

@@ -1,6 +1,6 @@
-package com.Mejia.helloandroid.repository
+package com.JaimesYHernandez.helloandroid.repository
 
-import com.Mejia.helloandroid.model.User
+import com.JaimesYHernandez.helloandroid.model.User
 
 class UserRepository {
 

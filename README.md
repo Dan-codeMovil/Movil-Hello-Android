@@ -1,69 +1,135 @@
+# Taller 1 - Hello Android
+
+
+## Información del Estudiante
+
+- Nombre: Daniel Eduardo Jaimes Montañez
+
+- Código: 1099738794
+
+- Fecha: 5/03/2026
+
+
+## Respuestas
+
+
+### 1. Función del AndroidManifest.xml
+
+es el archivo principal de configuración de una aplicación Android. Define información esencial que el sistema necesita para ejecutar la app. Entre sus funciones principales están:
+
+· Declarar las actividades (Activities), servicios y receptores de la aplicación.
+
+· Indicar los permisos que necesita la app (por ejemplo acceso a internet o cámara).
+
+· Definir el nombre, ícono y configuración básica de la aplicación.
+
+· Especificar la actividad principal que se ejecuta al iniciar la app.
+
+
+### 2. Diferencia entre activity_main.xml y MainActivity.kt
+
+La diferencia principal es que uno define la interfaz y el otro la lógica.
+
+· activity_main.xml
+
+o Es un archivo de diseño (layout).
+
+o Define cómo se ve la pantalla: botones, textos, imágenes, etc.
+
+o Usa XML para organizar los elementos visuales.
+
+· MainActivity.kt
+
+o Es un archivo de código en Kotlin.
+
+o Controla la lógica y el comportamiento de la pantalla.
+
+o Aquí se programan acciones como responder a clics de botones o manejar datos.
+
+### 3. Gestión de recursos en Android
+
+La gestión de recursos en Android consiste en organizar y acceder a elementos externos al código, como:
+
+· Imágenes
+
+· Colores
+
+· Textos
+
+· Diseños (layouts)
+
+· Iconos
+
+· Estilos
+
+Estos recursos se guardan en la carpeta res/ del proyecto y se organizan en subcarpetas, esto permite:
+
+· Reutilizar recursos fácilmente
+
+· Adaptar la app a diferentes idiomas y pantallas
+
+· Mantener el código más ordenado
+
+
+
+
+### 4. Aplicaciones famosas que usan Kotlin
+
+Muchas aplicaciones populares usan Kotlin para desarrollar sus apps Android. Algunas son:
+
+· Pinterest
+
+· Trello
+
+· Evernote
+
+· Netflix
+
+· Uber
+
+
+## Capturas de Pantalla
+
+
+![Captura del emulador](docs/captura_emulador.png)
+
+
+
 ## Taller 2 - Arquitectura MVVM
 
 ### Respuestas a Preguntas Conceptuales
-
 #### 1. ¿Qué problema resuelve el ViewModel en Android?
-
-Permite mantener los datos y la lógica independientes de la UI y sobrevivir a cambios del ciclo de vida.<img width="442" height="58" alt="image" src="https://github.com/user-attachments/assets/a9f2fa44-52d9-4f63-93da-af485e8c427d" />
-
-#### 2. ¿Por qué LiveData es "lifecycle-aware" y qué beneficio trae?
-
--	Solo envía datos cuando la vista está activa (STARTED o RESUMED).
--	Beneficios:
-  o	Evita crashes por actualizar vistas destruidas.
-  o	No hay fugas de memoria.
-  o	No es necesario manejar manualmente el ciclo de vida.
-
-#### 3. Explica con tus propias palabras el flujo de datos en MVVM
-
--	El View (Fragment) solicita datos o acciones al ViewModel.
--	El ViewModel procesa la lógica y pide datos al Repository.
--	El Repository obtiene los datos (API, BD, etc.).
--	Los datos regresan al ViewModel.
--	El ViewModel expone los datos mediante LiveData.
--	El View observa esos datos y actualiza la UI automáticamente.
-
-#### 4. ¿Qué ventaja tiene usar Fragments vs múltiples Activities?
-
-Los Fragments permiten reutilizar y manejar mejor la UI dentro de una sola Activity.
-
-o	Mejor rendimiento (menos Activities).
-o	Navegación más fluida
-o	Reutilización de componentes
-o	Mejor manejo con Navigation Component.
-
-
-#### 5. ¿Cómo ayuda el Repository Pattern a la arquitectura?
-
-Lo ayuda ya que actúa como una capa intermedia entre el ViewModel y las fuentes de datos.
-
-o	Centraliza el acceso a datos.
-o	Hace el código más limpio y mantenible.
-o	Facilita pruebas (testing).
+El ViewModel resuelve el problema de la pérdida de datos cuando ocurren cambios de configuración (como rotar la pantalla). Permite almacenar y gestionar los datos de la UI de forma que sobrevivan a estos cambios, evitando tener que recargar información o perder el estado.
 
 ---
 
-## Taller 3
+#### 2. ¿Por qué LiveData es "lifecycle-aware" y qué beneficio trae?
+LiveData es "lifecycle-aware" porque reconoce el estado del ciclo de vida de componentes como Activities o Fragments. Esto significa que solo actualiza la UI cuando el componente está activo, evitando errores como fugas de memoria o crashes por intentar actualizar vistas que ya no existen.
 
-### Funcionalidades implementadas
+---
 
-- Creación de tareas
-- Visualización de tareas en lista mediante RecyclerView
-- Navegación entre fragments (lista y detalle)
-- Persistencia de datos (las tareas se mantienen al cerrar la aplicación)
-- Implementación de recordatorios
+#### 3. Explica con tus propias palabras el flujo de datos en MVVM
+En MVVM, la vista (Fragment o Activity) observa al ViewModel. El ViewModel obtiene los datos desde el Repository, y este a su vez puede obtenerlos de una base de datos o de internet. Cuando los datos cambian, el ViewModel los actualiza y la vista se actualiza automáticamente sin necesidad de lógica adicional.
 
-### Sistema de recordatorios
+---
 
-Se implementó el uso de notificaciones mediante AlarmManager y BroadcastReceiver.
-Cuando el usuario configura un recordatorio en una tarea, la aplicación genera una notificación en el tiempo establecido.
+#### 4. ¿Qué ventaja tiene usar Fragments vs múltiples Activities?
+Los Fragments permiten reutilizar componentes de UI y hacer interfaces más dinámicas dentro de una sola Activity. Esto mejora el rendimiento, facilita la navegación y hace que la aplicación sea más modular y mantenible.
 
-### Evidencias
+---
 
-#### Lista de tareas, detalle de tarea, Notificación y dibujo inicial
+#### 5. ¿Cómo ayuda el Repository Pattern a la arquitectura?
+El Repository actúa como una capa intermedia entre el ViewModel y las fuentes de datos. Su ventaja es que centraliza el acceso a los datos, facilita el mantenimiento del código y permite cambiar la fuente de datos (por ejemplo, de API a base de datos) sin afectar otras partes de la aplicación.
 
-- imagenes 1 
-- imagen_1_pruebas
-- imagen_2_pruebas
-- imagen_3_pruebas
+---
 
+### Diagrama de Arquitectura
+
+    View (Fragment / Activity)
+              ↓
+         ViewModel
+              ↓
+         Repository
+         ↓        ↓
+    API / DB    Model
+![img.png](img.png)
