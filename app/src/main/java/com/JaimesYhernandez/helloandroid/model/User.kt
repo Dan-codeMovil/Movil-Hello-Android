@@ -1,4 +1,4 @@
-    package com.Jaimes.helloandroid.model
+    package com.JaimesYhernandez.helloandroid.model
 
     data class User(
         val id: Int,

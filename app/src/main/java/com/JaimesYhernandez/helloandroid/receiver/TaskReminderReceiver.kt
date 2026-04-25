@@ -1,4 +1,4 @@
-package com.Jaimes.helloandroid.receiver
+package com.JaimesYhernandez.helloandroid.receiver
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,7 +10,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import android.content.pm.PackageManager
 import android.Manifest
-import com.Jaimes.helloandroid.R
+import com.JaimesYhernandez.helloandroid.R
 
 class TaskReminderReceiver : BroadcastReceiver() {
 

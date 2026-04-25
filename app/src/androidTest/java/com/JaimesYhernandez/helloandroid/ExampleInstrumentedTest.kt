@@ -1,4 +1,4 @@
-package com.Jaimes.helloandroid
+package com.JaimesYhernandez.helloandroid
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

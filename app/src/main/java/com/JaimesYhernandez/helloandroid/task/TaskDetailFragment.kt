@@ -1,4 +1,4 @@
-package com.Jaimes.helloandroid.ui.task
+package com.JaimesYhernandez.helloandroid.ui.task
 
 import android.os.Bundle
 import android.view.View
@@ -6,9 +6,9 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import com.Jaimes.helloandroid.R
-import com.Jaimes.helloandroid.data.task.Task
-import com.Jaimes.helloandroid.data.task.TaskRepository
+import com.JaimesYhernandez.helloandroid.R
+import com.JaimesYhernandez.helloandroid.data.task.Task
+import com.JaimesYhernandez.helloandroid.data.task.TaskRepository
 import androidx.navigation.fragment.findNavController
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -52,7 +52,7 @@ class TaskDetailFragment : Fragment(R.layout.fragment_task_detail) {
 
                 val intent = Intent(
                     requireContext(),
-                    com.Jaimes.helloandroid.receiver.TaskReminderReceiver::class.java
+                    com.JaimesYhernandez.helloandroid.receiver.TaskReminderReceiver::class.java
                 )
 
                 val pendingIntent = PendingIntent.getBroadcast(

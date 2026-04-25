@@ -8,7 +8,7 @@
     <!-- LISTA -->
     <fragment
         android:id="@+id/taskListFragment"
-        android:name="com.Jaimes.helloandroid.ui.task.TaskListFragment"
+        android:name="com.JaimesYhernandez.helloandroid.ui.task.TaskListFragment"
         android:label="Lista de Tareas"
         tools:layout="@layout/fragment_task_list">
 
@@ -20,7 +20,7 @@
     <!-- DETALLE (CORRECTO) -->
     <fragment
         android:id="@+id/taskDetailFragment"
-        android:name="com.Jaimes.helloandroid.ui.task.TaskDetailFragment"
+        android:name="com.JaimesYhernandez.helloandroid.ui.task.TaskDetailFragment"
         android:label="Detalle de Tarea"
         tools:layout="@layout/fragment_task_detail" />
 
