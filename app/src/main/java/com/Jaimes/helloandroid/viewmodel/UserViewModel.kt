@@ -1,12 +1,12 @@
-package com.JaimesYHernandez.helloandroid.viewmodel
+package com.Jaimes.helloandroid.viewmodel
 
 import android.os.Handler
 import android.os.Looper
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.JaimesYHernandez.helloandroid.model.User
-import com.JaimesYHernandez.helloandroid.repository.UserRepository
+import com.Jaimes.helloandroid.model.User
+import com.Jaimes.helloandroid.repository.UserRepository
 
 class UserViewModel : ViewModel() {
 

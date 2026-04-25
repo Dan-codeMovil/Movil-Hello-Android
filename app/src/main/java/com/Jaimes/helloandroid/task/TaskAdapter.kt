@@ -1,12 +1,12 @@
-package com.JaimesYHernandez.helloandroid.ui.task
+package com.Jaimes.helloandroid.ui.task
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.JaimesYHernandez.helloandroid.R
-import com.JaimesYHernandez.helloandroid.data.task.Task
+import com.Jaimes.helloandroid.R
+import com.Jaimes.helloandroid.data.task.Task
 
 class TaskAdapter(private var tasks: List<Task>) :
     RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
